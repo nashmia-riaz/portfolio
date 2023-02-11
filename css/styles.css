@@ -1,0 +1,94 @@
+h1{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  color: #cc1646;
+  display: block;
+  text-align: center;
+}
+
+body {
+  border: #cc1646 8px solid;
+  margin: 0!important;
+  padding: 100px 50px;
+  min-height: 100vh;
+  background: #1f203b;
+  color: #babfde;
+}
+
+p.description,{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: #babfde;
+  font-style: italic;
+  font-weight:500;
+}
+
+.container{
+  margin-top: 100px;
+}
+
+.col>a>img{
+  width: 100%;
+  box-shadow: 0px 0px 20px rgba(1,1,1,1);
+  transition: width 0.5s;
+}
+
+.col>a>img:hover{
+  width: 102%;
+  z-index: 999;
+}
+
+.col{
+  padding: 0;
+  padding: 30px;
+}
+
+.game-technologies, .description{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: #babfde;
+  font-style: italic;
+  font-weight:500;
+}
+.tag{
+  font-size: 0.85em;
+  display: inline;
+  margin: 20px;
+  background-color: #3c3e6e;
+  padding: 5px 10px;
+  border-radius: 10px
+}
+hr{
+  border: 1px solid #979ba6;
+  margin: 30px auto 30px;
+  width: 25%;
+}
+.game-description{
+  text-align: left;
+  width: 50%;
+  margin: auto;
+  font-family: 'Montserrat', sans-serif;
+}
+.game-screenshot{
+  width: 50%;
+  margin: auto;
+  display: block;
+  margin-bottom: 50px;
+}
+.playstore-link{
+  margin: auto;
+  margin-right: 20px;
+  color: #babfde;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+}
+.playstore-link>img{
+  width: 20px;
+  margin-right: 10px;
+}
+.game-links{
+  margin: 30px auto;
+  width: 50%;
+  display: block;
+}
