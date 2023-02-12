@@ -11,7 +11,7 @@ body {
   margin: 0!important;
   padding: 100px 50px;
   min-height: 100vh;
-  background: #1f203b;
+  background: #1f2030;
   color: #babfde;
 }
 
@@ -50,11 +50,15 @@ p.description,{
   font-style: italic;
   font-weight:500;
 }
+.description{
+    font-weight: 300;
+    font-size: 1.2em;
+}
 .tag{
   font-size: 0.85em;
   display: inline;
   margin: 20px;
-  background-color: #3c3e6e;
+  background-color: #2d2f54;
   padding: 5px 10px;
   border-radius: 10px
 }
@@ -64,6 +68,7 @@ hr{
   width: 25%;
 }
 .game-description{
+  font-size: 1.2em;
   text-align: left;
   width: 50%;
   margin: auto;
@@ -76,12 +81,15 @@ hr{
   margin-bottom: 50px;
 }
 .playstore-link{
+  background-color: #2d2f54;
   margin: auto;
   margin-right: 20px;
   color: #babfde;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
+  border-radius: 12px;
+  transition: background-color 0.5s;
 }
 .playstore-link>img{
   width: 20px;
@@ -91,4 +99,8 @@ hr{
   margin: 30px auto;
   width: 50%;
   display: block;
+}
+
+.playstore-link:hover{
+  background-color: #432c5c;
 }
