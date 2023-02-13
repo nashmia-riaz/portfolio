@@ -17,6 +17,7 @@ body {
   min-height: 100vh;
   background: #1f2030;
   color: #babfde;
+  overflow-x: hidden;
 }
 
 p.description,{
@@ -156,4 +157,43 @@ hr{
 }
 .carousel-control-next,.carousel-control-prev{
   color: #ba1c1c;
+}
+nav.navbar{
+  width: 99vw!important;
+  position:absolute;
+  top: 0;
+  background-color: transparent!important;
+}
+.navbar-brand{
+  position: absolute;
+  left: -10px;
+  top: 30px;
+}
+.navbar-brand>img{
+  margin-top: none!important;
+  width:20px;
+  /* padding: 0!important; */
+}
+.navbar-nav>li>a{
+  font-family: 'Montserrat', sans-serif;
+  color: #54586e;
+  font-size: 1.2em;
+  margin-left:0.5em;
+  transition: 0.5s;
+}
+.navbar-nav>li>a:hover, .navbar-nav>li>a:focus{
+  background-color: transparent!important;
+  color:#6f2232;
+}
+.navbar-nav>.active>a, .navbar-nav>.active>a:focus{
+  color: #cc1646;
+  background-color: transparent!important;
+}
+.navbar-nav .nav-link.active{
+  color: #cc1646;
+}
+.navbar-nav{
+  position: fixed;
+  right: 30px;
+  top: 30px;
 }
