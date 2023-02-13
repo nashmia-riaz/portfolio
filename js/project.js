@@ -21,7 +21,7 @@ function LoadProject(project){
 
   var linksToAdd = "";
   project.Links.forEach(function(currentValue, index, arr){
-    linksToAdd += '<a href="'+currentValue.Link+'" class="tag playstore-link"><img src="'+currentValue.Image+'" alt="">'+currentValue.Text+'</a>'
+    linksToAdd += '<a href="'+currentValue.Link+'" class="playstore-link"><img src="'+currentValue.Image+'" alt="">'+currentValue.Text+'</a>'
   });
   $("#project-links").html(linksToAdd);
 

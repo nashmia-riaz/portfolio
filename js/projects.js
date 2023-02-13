@@ -5,7 +5,7 @@ var projects = [
     Type: "Project",
     Thumbnail: "images/dock-it.png",
     Headline: "A shared list-keeping app that helps you focus on what needs to be done.",
-    Tags: "UNITY,C#,ANDROID,FIREBASE,UI DESIGN,WIP,PROGRAMMING,ART",
+    Tags: "UNITY,C#,ANDROID,FIREBASE,UI DESIGN,PROGRAMMING,ART",
     MainScreenshot: "../images/dock-it-screenshot.png",
     Links: [{
       Image: "../images/playstore-logo.png",

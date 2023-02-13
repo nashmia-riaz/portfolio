@@ -55,6 +55,10 @@ p.description,{
   font-style: italic;
   font-weight:500;
 }
+.tags{
+  width: 50%;
+  margin: auto;
+}
 .description{
     font-weight: 300;
     font-size: 1.2em;
@@ -92,9 +96,10 @@ hr{
   object-fit: contain;
 }
 .in-text-image>img{
-  margin: 40px auto; 
+  margin: 40px auto;
 }
 .playstore-link{
+  font-size: 0.85em;
   background-color: #2d2f54;
   margin: auto;
   margin-right: 20px;
