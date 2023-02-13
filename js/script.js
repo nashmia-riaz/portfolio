@@ -12,7 +12,7 @@ function LoadProjects(filter){
     }else{
       var projectsContent = "<div class=\"row\">";
       for(var i = 0; i < projects.length; i++){
-        if(filter){
+        if(filter && filter != "All"){
           var tags = projects[i].Tags.split(",");
           tags.forEach(function(currentValue, index, arr){
 
