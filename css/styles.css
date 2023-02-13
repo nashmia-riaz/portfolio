@@ -5,7 +5,11 @@ h1{
   display: block;
   text-align: center;
 }
-
+a{
+  color: #cc1646;
+  text-decoration: none;
+  font-weight: 500;
+}
 body {
   border: #cc1646 8px solid;
   margin: 0!important;
@@ -24,17 +28,18 @@ p.description,{
 }
 
 .container{
-  margin-top: 100px;
 }
 
-.col>a>img{
+.game-thumbnail{
   width: 100%;
-  box-shadow: 0px 0px 20px rgba(1,1,1,1);
-  transition: transform 0.5s;
+  box-shadow: 0px 0px 10px rgba(1,1,1,0);
+  transition: transform 0.5s, box-shadow 0.5s;
+  /* transition: box-shadow 0.5s; */
 }
 
-.col>a>img:hover{
+.game-thumbnail:hover{
   transform: scale(1.05);
+  box-shadow: 0px 0px 30px rgba(1,1,1,1);
   z-index: 999;
 }
 
@@ -43,7 +48,7 @@ p.description,{
   padding: 30px;
 }
 
-.game-technologies, .description{
+.tags, .description{
   font-family: 'Montserrat', sans-serif;
   text-align: center;
   color: #babfde;
@@ -65,7 +70,7 @@ p.description,{
 hr{
   border: 1px solid #979ba6;
   margin: 30px auto 30px;
-  width: 25%;
+  width: 50%;
 }
 .game-description{
   font-size: 1.2em;
@@ -76,31 +81,74 @@ hr{
 }
 .game-screenshot{
   width: 50%;
-  margin: auto;
+  margin: 50px auto 0 auto;
   display: block;
-  margin-bottom: 50px;
+}
+.game-screenshot>img, .in-text-image>img{
+  display:block;
+  margin:auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.in-text-image>img{
+  margin: 40px auto; 
 }
 .playstore-link{
   background-color: #2d2f54;
   margin: auto;
   margin-right: 20px;
   color: #babfde;
-  padding: 10px 20px;
+  padding: 10px 30px;
   text-align: center;
   text-decoration: none;
   border-radius: 12px;
   transition: background-color 0.5s;
 }
 .playstore-link>img{
-  width: 20px;
+  width: 20px!important;
   margin-right: 10px;
 }
-.game-links{
-  margin: 30px auto;
-  width: 50%;
-  display: block;
-}
-
 .playstore-link:hover{
   background-color: #432c5c;
+}
+.game-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.links-container{
+  margin: 0 auto;
+  display: inline-block;
+  overflow: hidden;
+  padding: 20px;
+}
+.sorting-links{
+  width: 50%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sorting-links>div{
+  display: inline;
+  margin: auto;
+  margin-top: 20px;
+}
+.sorting-links>div>a{
+  padding: 15px;
+  background-color: #2d2f54;
+  color: #babfde!important;
+  text-decoration: none;
+  border-radius: 10px;
+  margin: 15px;
+  transition: background-color 0.5s
+}
+.sorting-links>div>a:hover{
+  background-color: #432c5c;
+  color: #babfde;
+}
+.carousel-control-next,.carousel-control-prev{
+  color: #ba1c1c;
 }

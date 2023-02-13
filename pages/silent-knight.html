@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Silent Knight</title>
+  </head>
+  <body>
+    <div class="div-block">
+      <h1>SILENT KNIGHT</h1>
+      <p class="description">A fearless knight running through the dangers of an endless dungeon.</p>
+      <div class="game-technologies">
+        <p class="tag">UNITY</p><p class="tag">C#</p>
+      </div>
+
+      <div class="game-screenshot">
+        <img src="../images/silent-knight-preview.gif" alt="">
+      </div>
+
+      <div class="game-links">
+        <div class="links-container">
+        <a href="#" class="tag playstore-link"><img src="../images/playstore-logo.png" alt="">Get it on the Play Store</a>
+        <a href="#" class="tag playstore-link"><img src="../images/github-logo.png" alt="">View source code</a>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="game-description">
+        <p>Catronaut is a game about my cat Marty floating endlessly through space. The premise is that Marty is on a mission through space when her spaceship is hit by an asteroid.
+          She is now stranded in the vastness of space with a broken thruster and must survive for as long as possible.</p>
+
+        <p>One of the first things I coded for this was the movement mechanic. I wanted this game to be challenging and the movement was going to be the highlight for that.
+          In this case. the player will keep going in a counter-clockwise circle. Tapping and holding on the screen will start rotating the player in a clockwise motion. This way, the user
+          is meant to move forwards by tapping the screen and going in a wiggly motion.
+        </p>
+
+        <p>Another feature of this project is random obstacle generation and object pooling. There are several different obstacles that are prefabbed and spawned into the map randomly.
+        </p>
+
+      <img class="game-screenshot" src="../images/catronaut-obstacles.png" alt="">
+        <p>For the planets, they are spawned on the top and bottom edge of the screen and will alternate. This leaves much room in the center of the screen to traverse the map.
+        Here, we spawn in the asteroids and debris. Each of these are spaced out by spawning after 2x the width of the previous obstacle. This way, the player has enough room to squeeze through.</p>
+
+        <p>Lastly, this project is integrated with Google Play Services for keeping track of the highscore. This is a hyper-casual game with the goal to score more than your friends.</p>
+      </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</html>
