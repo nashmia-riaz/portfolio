@@ -26,15 +26,20 @@ function LoadProjects(filter){
             projectsContent+=LoadProject(i, responseTxt);
         }
 
-        if(projectsLoaded % 3 == 0 && projectsLoaded > 0){
-          //break the row here
-          projectsContent+= "</div>";
+        if(projectsLoaded %3 == 0){
+          projectsContent+= "</div><div class='row'>";
         }
+      }
+
+      if(projectsLoaded % 3 == 0 && projectsLoaded > 0){
+        //break the row here
+        projectsContent+= "</div>";
       }
 
       //fill empty space with empty columns
       if(projectsLoaded % 3 != 0 && projectsLoaded > 0){
         for(var i = 0; i < 3 - (projectsLoaded % 3); i++){
+          console.log("Adding div");
           projectsContent+= "<div class='col'></div>";
         }
       }
