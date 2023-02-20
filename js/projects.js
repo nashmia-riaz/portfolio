@@ -27,11 +27,11 @@ var projects = [
     MainScreenshot: "../images/catronaut-screenshot.png",
     Links: [{
       Image: "../images/playstore-logo.png",
-      Link: "#" ,
+      Link: "https://play.google.com/store/apps/details?id=com.NashMakesGames.TheCatronaut&hl=en&gl=US" ,
       Text: "Get it on the Play Store"
     },{
       Image: "../images/github-logo.png",
-      Link: "#" ,
+      Link: "https://github.com/nashmia-riaz/catronaught" ,
       Text: "View source code"
     }],
     Description:
@@ -41,6 +41,30 @@ var projects = [
       "<p>One of the features of this game is the obstacle spawning. The planets spawn on the top and bottom edges of the screen. In between, debris and astroids are likely to spawn. The gap between each obstacle is 2x the width of the previous one, therefore allowing enough space for the player to squeeze through.</p>"+
       "<div class=\"in-text-image\"><img src=\"../images/catronaut-obstacles.png\"></div>"+
       "<p>It also has visual refinements like animations, a trail on the player, music and a very thorough menu. It's available to play on the Play Store right now!</p>"
+  },
+  {
+    Name: "Perdita",
+    Type: "Project",
+    Thumbnail: "images/perdita.png",
+    Headline: "Explore the horrors of a procedurally generated maze!",
+    Tags: "ML-AGENTS,REINFORCEMENT LEARNING,UNITY,C#,PROGRAMMING",
+    MainScreenshot: "../images/perdita-preview.gif",
+    Links: [{
+      Image: "../images/github-logo.png",
+      Link: "https://github.com/nashmia-riaz/horror-maze-game" ,
+      Text: "View the source code"
+    }],
+    Description:
+      "<p>Perdita was part of my Masters thesis at City University of London. My thesis title was exploring the 'Effects and Limitations of Machine Learning on AI Solving a Grid-Based Maze'.</p>"+
+      "<p>The idea spawned off as part of my MSc Computer Graphics assignment. I used OpenGL and C++ to create a grid-based maze with A* algorithm on the AI to solve the maze. The goal of the AI at this point was to catch up with the player. It was made so that the monster would follow sound. If the player ran, the monster would follow. The player could throw flares to light up their path, which would also act as a distraction for the AI.</p>"+
+      "<p>So far, the AI was a simple Finite State Machine (FSM). I further expanded this project in Unity, starting over to create a grid using 4 different prefabs. I then build the NavMesh on my maze, and had the AI act as a NavMesh agent. Thus, recreating my project in Unity. I also redid the 3D model for the enemy I had by rigging it and adding different animations.</p>"+
+      "<iframe  src='https://www.youtube.com/embed/M_fZy3haWoA' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>"+
+      "<p>Next up, I trained my AI using reinforcement learning with <a href='https://github.com/Unity-Technologies/ml-agents'>ML-Agents</a>; a machine learning API provided by Unity. I started with a simple 2x2 random grid and trained the AI over more complex grids, ending on a 4x4 random grid with a moving target. The results were quite surprising as I didn't expect the AI to train so well with so many variables (random map, and a moving target).</p>"+
+      "<iframe src='https://www.youtube.com/embed/aoEre15-P74' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>"+
+      "<p>The AI does 'explore' the map and try to find the target, but it is still quite limiting as compared to the FSM. The AI would very often 'get lost' and FSM with A* algorithm still seems to be the more 'intelligent' and efficient way for pathfinding on an AI.</p>"+
+      "<p>Lastly, I did finish the game by adding in settings to adjust sound and brightness. I also added a minimap and an expanded map. The minimap was an orthographic camera that would follow the player, whereas the expanded map would show the whole maze with the explored parts as revealed and unexplored parts of the maze as hidden.</p>"+
+      "<p>You can see the game in action below: </p>"+
+      "<iframe src='https://www.youtube.com/embed/qJXNt4YlFnM' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>"
   },
   {
     Name: "Tutel Streaming",
@@ -66,7 +90,7 @@ var projects = [
     MainScreenshot: "../images/silent-knight-preview.gif",
     Links: [{
       Image: "../images/controller.png",
-      Link: "#" ,
+      Link: "https://nashmia-riaz.github.io/Silent-Knight/" ,
       Text: "Play the demo"
     }],
     Description:
@@ -86,7 +110,7 @@ var projects = [
     MainScreenshot: "../images/knockout-nation-preview.gif",
     Links: [{
       Image: "../images/playstore-logo.png",
-      Link: "#" ,
+      Link: "https://play.google.com/store/apps/details?id=com.nineoften.knockoutnation&hl=en&gl=US" ,
       Text: "Download from the Play Store"
     }],
     Description:
@@ -100,5 +124,49 @@ var projects = [
       "<div class=\"in-text-image\"><img src=\"../images/knockout-nation-courts.png\"></div>"+
       "<p>But alas; right before we launched Google announced that they were shutting down their API. This lead to a new problem; keeping the game functioning without the multiplayer. So, we added in AI. The AI would randomly select a force and angle and shoot, and this would be shown on screen. Bot with higher difficulty were more likely to get the ball in the hoop, which meant that biased randomization was added in.</p>"+
       "<p>This was one of my first big game projects and a huge learning curve for me to overcome. Always grateful to my client who gave me this opportunity at the time. :)</p>"
+  },
+  {
+    Name: "Damage Control",
+    Type: "Gallery",
+    Thumbnail: "images/damage-control.png",
+    Headline: "Riveting goal to fix the damage caused by your video game hero!",
+    Tags: "UNITY,C#,WEBGL,PROGRAMMING",
+    MainScreenshot: "../images/damagecontrol/damage-control-preview.gif",
+    Images: ["damagecontrol/Level1.JPG", "damagecontrol/Level2.JPG","damagecontrol/Level3.JPG"],
+    Links: [{
+      Image: "../images/controller.png",
+      Link: "https://nashmia-riaz.github.io/DamageControl/" ,
+      Text: "Try out the demo!"
+    }],
+    Description:
+      "<p>A proud hero valiantly crusades across the land, eager to defeat all evil in his wake! Unfortunately, you are not he. You are the man behind the scenes, forced to toil after the hero and clean up his mess. Follow the hero's destructive wake, making sure to repair the collateral damage he's inadvertently caused and restore the beauty of the land once more. Make sure he can return as the hero and not reviled as a villain! Click and drag objects onto their other halves to reassemble them.</p>"+
+      "<div class=\"in-text-image\"><img src=\"../images/damagecontrol/damage-control-preview.gif\"></div>"+
+      "<p>This was a very fun project as part of Global Game Jam 2020. My friends and I spent a weekend crafting up this game, where we tried to make our own assets and animations as possible and get a game going from the ground up. The theme for that year's GGJ was 'repair', so our idea spawned off of all the destruction Link does breaking pots in Legend of Zelda. Our story follows a secret mage that cleans up after him.</p>"+
+      "<p>My work was focused on some art assets such as the UI and backgrounds, as well as helping out with sprite animations. I also coded the menus, endless scrolling objects within the game and any animations in between. Finally, I helped manage the git PRs and code merging.</p>"+
+      "<p>My wonderful teammates for this game also included (in alphabetical order) <a href='https://blastinghavoc.github.io/index.html'>Jacob Taylor</a>, <a href='http://5droom.co.uk'>Jihae Han</a>, <a href='#'>Konstantin Ivanovich</a> and <a href='https://www.linkedin.com/in/mark-trump-6b3981120/'>Mark Trump</a>.</p>"+
+      "<p>The game has 3 different levels unlockable based on your highscore. They have different aesthetics and assets to keep the player engaged. You can try out the demo linked above!</p>"
+  },
+  {
+    Name: "Stack It Up",
+    Type: "Project",
+    Thumbnail: "images/stack-it-up.png",
+    Headline: "Experience the thrills of a fast food employee trying to stack burgers!",
+    Tags: "UNITY,C#,PROGRAMMING,UI DESIGN",
+    MainScreenshot: "../images/stack-it-up-preview.gif",
+    Images: ["damagecontrol/Level1.JPG", "damagecontrol/Level2.JPG","damagecontrol/Level3.JPG"],
+    Links: [{
+      Image: "../images/controller.png",
+      Link: "https://nashmia-riaz.github.io/StackItUp/" ,
+      Text: "Try out the demo!"
+    }],
+    Description:
+      "<p>As part of my Game Design class during my Masters, we were assigned to come up with an elevator pitch and prototype for an imaginary company. A tie in game for a brand. As a huge fan of Overcooked, I had the idea to make Stack It Up; a simplified burger stacking game for mobile.</p>"+
+      "<p>I started off by making the UI mockups for the game. I presented these with my pitch for a chaotic burger stacking game, simplified as a rendition of those top-down car games where you had to avoid traffic that we all grew up with.</p>"+
+      "<div class=\"in-text-image\"><img src=\"../images/stack-it-up-screens.png\"></div>"+
+      "<p>I then created the 2D assets and coded the algorithm. I created 2 game modes; a casual arcade game mode where you just have to fill in one order at a time. And a endless game mode where you have to fill in orders as their timers run out.</p>"+
+      "<p>The algorithm for the first one is simple. I have 4 different recipes for burgers. The player can select any one and practice creating it over and over again. As the game progresses, the speed at which the ingredients fall increases as well; thus increasing the difficulty. Tapping on the burger reveals its contents and pauses the game.</p>"+
+      "<p>The endless game mode is a little more complex. For this, I created classes for each order, which contains it's recipe and timer. The player is supposed to get the right order before it expires and they lose a life.</p>"+
+      "<p>The last addition to the game has been adding a random bias. Between 5 ingredients and 3 lanes, often times the game doesn't spawn the ingredient that the player needs. So, the game manager works off of a random bias to increase the chances of spawning the ingredient that's needed, and switches this bias as the player progresses.</p>"+
+      "<p>You can try out the demo linked above!</p>"
   }
 ];
