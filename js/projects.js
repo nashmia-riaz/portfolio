@@ -1,6 +1,26 @@
 
 var projects = [
   {
+    Name: "Bombs Away!",
+    Type: "Project",
+    Thumbnail: "images/bombs-away.png",
+    Headline: "An educational game about coordinates and cats!",
+    Tags: "UNITY,C#,ANDROID,UI DESIGN,PROGRAMMING,ART",
+    MainScreenshot: "../images/bombs-away.gif",
+    Links: [{
+      Image: "../images/playstore-logo.png",
+      Link: "https://play.google.com/store/apps/details?id=com.ThePurramid.BombsAway" ,
+      Text: "Try it on the Play Store"
+    }],
+    Description:
+      "<p>Bombs Away! is an educational game to help teach K-12 students about coordinates, quadrants and cats!</p>"+
+      "<p>The founder of Purramid Games reached out to me after seeing some of my work, more prominently the Catronaut game. They had been working on an idea for a cat game except this time it would teach kids how to math!</p>"+
+      "<p>I was tasked with using the game design rules to come up with the wireframes, from which we slowly worked up to the mockups and artwork. We worked closely with a pedagogical expert to make sure the designs were comprehendable and integral in learning for students.</p>"+
+      "<p>Once we were happy with our mockups, I was then tasked with the development. As a solo developer, I was tasked with extending Unity's existing UI and developing new systems to work modularly with our design. Players are given random coordinates on the grid and they must figure out its location. They can scroll on the grid, use two fingers to zoom, drag and drop litter boxes. The system is designed as to not repeat coordinates given to the player.</p>"+
+      "<p>We then brought on voice actor and other artists to help us polish our work. Our work included working with the VA to bring about a tutorial for the game. My work included working closely with the Unity's Mecanim system to bring in interactable animations that are in sync with the VA's voice lines.</p>"+
+      "<p>As of writing this, Bombs Away! has been my most extensive work with the Unity game engine and within the game development process. Not only did I work on the UX, wireframes, UI design and character animations, I also had to work with the core engine and extend it to make it work with the game idea, all the while making sure my code is up to the current standards, deploys moden design patterns and is extendable. You can try out the game on the <a href='https://play.google.com/store/apps/details?id=com.ThePurramid.BombsAway'>Play Store</a>.</p>"
+  },
+  {
     Name: "Dock-It",
     Type: "Gallery",
     Thumbnail: "images/dock-it.png",
