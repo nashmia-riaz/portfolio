@@ -2,6 +2,11 @@
 var projects = [
   {
     Name: "Bombs Away!",
+    Details: {
+      Role: "Lead Developer",
+      TeamSize: "3 people",
+      Duration: "24 Months",
+      Tech: "Unity and C#"},
     Type: "Project",
     Thumbnail: "images/bombs-away.png",
     Headline: "An educational game about coordinates and cats!",
@@ -21,7 +26,13 @@ var projects = [
       "<p>As of writing this, Bombs Away! has been my most extensive work with the Unity game engine and within the game development process. Not only did I work on the UX, wireframes, UI design and character animations, I also had to work with the core engine and extend it to make it work with the game idea, all the while making sure my code is up to the current standards, deploys moden design patterns and is extendable. You can try out the game on the <a href='https://play.google.com/store/apps/details?id=com.ThePurramid.BombsAway'>Play Store</a>.</p>"
   },
   {
-    Name: "Dock-It",
+    Name: "Dock-It", 
+    Details: {
+      Role: "Solo Developer",
+      TeamSize: "1 person",
+      Duration: "2 Months",
+      Tech: "Unity and C#"
+    },
     Type: "Gallery",
     Thumbnail: "images/dock-it.png",
     Headline: "A shared list-keeping app that helps you focus on what needs to be done.",
@@ -43,7 +54,13 @@ var projects = [
 
   },
   {
-    Name: "Catronaut",
+    Name: "Catronaut", 
+    Details: {
+      Role: "Solo Developer",
+      TeamSize: "1 person",
+      Duration: "1.5 Months",
+      Tech: "Unity and C#"
+    },
     Type: "Project",
     Thumbnail: "images/catronaut.png",
     Headline: "A hyper-casual game about a cat astronaut floating through the endless void of space.",
@@ -67,7 +84,13 @@ var projects = [
       "<p>It also has visual refinements like animations, a trail on the player, music and a very thorough menu. It's available to play on the Play Store right now!</p>"
   },
   {
-    Name: "Perdita",
+    Name: "Perdita", 
+    Details: {
+      Role: "Solo Developer",
+      TeamSize: "1 person",
+      Duration: "6 Months",
+      Tech: "Unity and C#"
+    },
     Type: "Project",
     Thumbnail: "images/perdita.png",
     Headline: "Explore the horrors of a procedurally generated maze!",
@@ -93,7 +116,13 @@ var projects = [
       "<iframe src='https://www.youtube.com/embed/qJXNt4YlFnM' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>"
   },
   {
-    Name: "Silent Knight",
+    Name: "Silent Knight", 
+    Details: {
+      Role: "Developer",
+      TeamSize: "2 people",
+      Duration: "3 Months",
+      Tech: "Unity and C#"
+    },
     Type: "Project",
     Thumbnail: "images/silent-knight.png",
     Headline: "Run through the endless dungeon as the silent knight",
@@ -114,6 +143,12 @@ var projects = [
   },
   {
     Name: "Knockout Nation",
+    Details: {
+      Role: "Lead Developer",
+      TeamSize: "2 people",
+      Duration: "18 Months",
+      Tech: "Unity and C#"
+    },
     Type: "Project",
     Thumbnail: "images/knockout-nation.png",
     Headline: "Be the king of basketball in this multiplayer knockout game!",
@@ -138,6 +173,12 @@ var projects = [
   },
   {
     Name: "Damage Control",
+    Details: {
+      Role: "Developer",
+      TeamSize: "4 people",
+      Duration: "3 Days",
+      Tech: "Unity and C#"
+    },
     Type: "Gallery",
     Thumbnail: "images/damage-control.png",
     Headline: "Riveting goal to fix the damage caused by your video game hero!",
@@ -159,6 +200,12 @@ var projects = [
   },
   {
     Name: "Stack It Up",
+    Details: {
+      Role: "Solo Developer",
+      TeamSize: "1 person",
+      Duration: "3 Weeks",
+      Tech: "Unity and C#"
+    },
     Type: "Project",
     Thumbnail: "images/stack-it-up.png",
     Headline: "Experience the thrills of a fast food employee trying to stack burgers!",

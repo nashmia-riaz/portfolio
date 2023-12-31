@@ -25,12 +25,17 @@ function LoadArt(project){
 
   $("#project-tagline").html(project.Headline);
 
-  var tags = project.Tags.split(",");
-  var tagsToAdd="";
-  tags.forEach(function(currentValue, index, arr){
-    tagsToAdd+= "<div class=\"tag\">"+currentValue+"</div>";
-  });
-  $("#tags").html(tagsToAdd);
+  // var tags = project.Tags.split(",");
+  // var tagsToAdd="";
+  // tags.forEach(function(currentValue, index, arr){
+  //   tagsToAdd+= "<div class=\"tag\">"+currentValue+"</div>";
+  // });
+  // $("#tags").html(tagsToAdd);
+  
+  $("#project-role").html(project.Details.Role);
+  $("#project-team-size").html(project.Details.TeamSize);
+  $("#project-duration").html(project.Details.Duration);
+  $("#project-stack").html(project.Details.Tech);
 
   $("#project-screenshot").html("<img src=\""+project.MainScreenshot+"\">")
 

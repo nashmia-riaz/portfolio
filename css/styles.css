@@ -20,7 +20,7 @@ body {
   overflow-x: hidden;
 }
 
-p.description,{
+p.description{
   font-family: 'Montserrat', sans-serif;
   text-align: center;
   color: #babfde;
@@ -208,4 +208,17 @@ iframe{
 #maze-generation{
   width: 30%;
   margin: auto;
+}
+.project-summary{
+  width: 50%;
+  margin: auto;
+  table-layout: auto;
+}
+td{
+  text-align: center;
+  padding-top: 14px;
+}
+i{
+  display: inline;
+  margin-right: 6px;
 }
