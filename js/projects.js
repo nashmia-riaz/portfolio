@@ -1,6 +1,34 @@
 
 var projects = [
   {
+    Name: "Distance Dash",
+    Details: {
+      Role: "Game Engineer II",
+      TeamSize: "Interdisciplinary team: 8 people",
+      Duration: "7 Months",
+      Tech: "Roblox & Typescript"},
+    Type: "Project",
+    Thumbnail: "images/distance-dash.png",
+    Headline: "Use your knowledge of physics to launch groceries and supplies to eager animal friends!",
+    Tags: "UNITY,C#,ANDROID,UI DESIGN,PROGRAMMING,ART",
+    MainScreenshot: "../images/distance-dash-preview.gif",
+    Links: [{
+      Image: "../images/roblox-logo.png",
+      Link: "https://www.roblox.com/games/13470104112/Distance-Dash-New-Physics-Challenge" ,
+      Text: "Try it on Roblox"
+    }],
+    Description:
+      "<p>I worked on Distance Dash as part of my contract for <a href='https://www.filamentgames.com/'>Filament Games</a>. This was my first Roblox project and having it structed in Typescript made it super easy to pick up.</p>"+
+      "<p>This is an educational game that aims to teach kids about Newton's laws of physics. It revolves around a simulation where a starting and stopping force is applied to a vehicle and it moves along a road using custom simulated physics. </p>"+
+      "<p>It has two phases: the goal of Phase 1 is to communicate with your partner, set your mass and forces and bring your vehicles to a perfect stop at the finish line at the same time. Phase 2 focuses on reverse engineering Phase 1, where players must individually predict the result of the simulation.</p>"+
+      "<p>My responsibilities included working on different features of the game. Such work would include implementing UI functionality, player communication features as well as tweaking assets placed in the scene.</p>"+
+      "<p>For example, my first main task was to implement and extend an elaborate matchmaking system. It allows players to invite another player to be their partner. Further invites are disabled to prevent spam unless the player cancels their previous invite. Once the partner accepts said invite, the two players are then highlight and move towards a teleporter so they can begin their physics simulations.</p>"+
+      "<p>I was also tasked with implementing a custom chat system within the game. The chat system allows the two players to communicate with each other by using pre-determined questions and answers. Answer options would change depending on what question the partner asked, and answers would also include dynamic values such as the force and mass that the player selected. These values update automatically.</p>"+
+      "<p>Another system that I worked on was the prompts system. Different NPCs placed across the map would have little UIs on them that would display helpful hints. Star feature of this system was it was made to be dynamic so more prompts could be created or destroyed at runtime depending on the level's requirements.</p>"+
+      "<p>Lastly, I was also tasked with extending previously written code by implementing a new level for the game, called Phase 2. Phase 2 runs similarly to Phase 1 but the player has to predict the outcome instead of trying to reach the optimum result be using the correct forces and mass. Additionally, I also had to polish previously implemented features to bring the product across the finish line. Such polishing included new tweens and animations, additional UI features and integral bug fixing.</p>"+
+      "<p>It was a pleasure to work on this contract and you can try out the final game on <a href='https://www.roblox.com/games/13470104112/Distance-Dash-New-Physics-Challenge'>Roblox</a>.</p>"
+  }, 
+  {
     Name: "Bombs Away!",
     Details: {
       Role: "Lead Developer",
