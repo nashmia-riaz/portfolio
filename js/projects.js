@@ -1,6 +1,52 @@
 
 var projects = [
   {
+    Name: "Space Adventures of Mr. Bonesy",
+    Details: {
+      Role: "Solo Developer",
+      TeamSize: "1 person",
+      Duration: "8 Weeks",
+      Tech: "Unreal 5 & C++"},
+    Type: "Project",
+    Thumbnail: "images/mrbonesy.png",
+    Headline: "Help Mr. Bonesy traverse the dangers of space using the power of math!",
+    Tags: "UNITY,C#,ANDROID,UI DESIGN,PROGRAMMING,ART",
+    MainScreenshot: "../images/mrbonesy-preview.gif",
+    Links: [{
+      Image: "../images/github-logo.png",
+      Link: "https://www.roblox.com/games/13470104112/Distance-Dash-New-Physics-Challenge" ,
+      Text: "Try the Demo"
+    }],
+    Description:
+  "<p>In order to learn and showcase my knowledge of the Unreal Engine, I came up with a procedurally generated game idea. The game follows Mr. Bonesy (not be confused with the infamous Alien cat called Jonesy) as he traverses the dangers of space in his little UFO. The controls are stuck on auto pilot, except Mr. Bonesy can avoid planets in his path by solving a math equation. Mr. Bonesy must survive in space as long as possible.</p>"+
+  "<h2>Spline Generation</h3><p>The main feature of game is the procedural generation of a Catmull Rom spline. The code for this was heavily taken from Wikipedia and brought into the game. However, for the purpose of the game, the spline was procedurally generated beyond the 4-points allowed by the code. Moreover, the spline is also generated in 3D space by calculated and incremented randomly upon the previously generated point. This is all stored in an array, and the Tick funciton is called to interpolate between points while moving the player along the path. Once you reach a point in spline, a random point is added at the end to keep going. </p>"+
+  "<div class=\"in-text-image\"><img src='../images/mrbonesy-spline.png'></div>"+
+  "<p>A substantial problem seen here very quickly was there were instantly where the player was sent directly above their previous position, and the camera would flip as shown below:</p>"+
+  "<div class=\"in-text-image\"><img src='../images/mrbonesy-camera-flip.gif'></div>"+
+  "<p>In order to solve this, a check was added so that the z-position was only incremented upon if either X or Y, or both were being randomized upon. This way, we would create a gentler slope and the camera no longer flipped.</p>"+
+  "<h2>Obstacle Avoidance</h2><p>Next up, we added our obstacles. A blueprint of a planet would randomly be spawned on the spline. The idea is that the player must be able to solve a QTE to avoid this. The obstacle avoidance path will be simple: if the player answers correctly, 3 new points are added to the spline right after the concerning obstacle point. These 3 points take into consideration the planet's size, the player's size and give it a little margin, and then navigate the player around it.</p>"+
+  "<div class=\"in-text-image\"><img src='../images/mrbonesy-diagram.png'></div>"+
+  "<p>The path recalculation is calculated for the point P(x+3). This is because Catmull Rom spline maps the motion from P2 to P3. while considering points P1 - P4. When we reach P3, new path is calculated for the point P5 that is outside our current spline. This way, the motion is kept smooth between individual splines paths.</p>"+
+  "<div class=\"in-text-image\"><img src='../images/mrbonesy-obstacle-avoidance.gif'></div>"+
+  "<p>Once this was done, I made blueprints for the different planets. These planets would rotate randomly, and detect collision with the player. Upon collision, we re-enable the planet's geometry collection's physics and apply a radial force upon it so it shatters and the pieces float away. I generated a fracture for each of the 30 different planets in game and firstly worked with blueprints to add my code as follows:</p>"+
+  "<div class=\"in-text-image\"><img src='../images/mrbonesy-blueprint.png'></div>"+
+  "<p>I didn't want to copy-paste these blueprints for each of my 30 planets, so I started bring it over to C++. This process took some time as I was new but was pretty straightforward using Unreal's documentation. I then swap out the blueprint's geometry collection with one of the 30 fractures I created earlier upon spawning it in.</p>"+
+  "<h2>QTE Equation Generation</h2><p>I knew I wanted simple math from the equations. I started off by generating 2 single digits and picking a random operation from addition, multiplication, subtraction and division. I would then store the answer in my QTE manager, and manage only numerical input from the player. Only numerical input was detected. SetupInputComponent was used to bind any key being pressed under my player controller, and then it was further scanned to see if the key being pressed is a number. Then, this number was stored as our input/answer. The input stored would be checked to see if it matches the answer's length before being validated. This way, player was allowed to put in 2 numbers if the answer length had 2 numbers (e.g, if the equation was 6 + 8, where the answer would be 14).</p>"+
+  "<div class=\"in-text-image\"><img src='../images/mrbonesy-equation.png'></div>"+
+  "<p>However, this needed further refinement. The equation could ask you to subtract a bigger number from a smaller one, which would result in a negative answer. It could also ask you to randomly divide 2 numbers, resulting in a fraction or even error where divided by 0. For an education game designed for kids, these scenarios seem too advanced.</p>"+
+  "<p>The solutions were simple. In case of subtraction, the X2 was generated after X1, and the randomization range was updated so that this number would be greater than X1. For the division, X2 was contained to be always greater than 0, and was generated first. X1 was then generated by multiplying X2 with a random number. This way, the equation are kept relatively simple.</p>"+
+  "<h2>UI Design</h2><p>The UI was pretty straightforward. When approaching a planet, the player will see a flashing danger sign. The player is then shown an equation and input is taken to see if they can solve it. The flashing UI was generated as a blueprint and therefore animated. There was some trouble linking the animations in the code, but eventually Transient and BindWidgetAnim UProperties were added to the variables. The animations were then linked, played as needed and even had dynamic event functions linked to when some animations would start or finish.</p>"+
+  "<p>One strange problem I ran into here was I wanted to show a division symbol ÷ for the equation, but the symbol would not print properly when I assigned it from C++. It would show as such: </p>"+
+  "<div class=\"in-text-image\"><img src='../images/mrbonesy-division.png'></div>"+
+  "<p>The solution for this was to convert the character to TChar from UTF8 in Unreal before I passed it as a string to the UI.</p>"+
+  "<h2>Refinements</h2><p>I then worked towards refining my game. I wanted to add a camera shake if the player put in the wrong answer. Only when the camera shake is over should the answer reset and re-enable player input. I did this by using C++ timers in Unreal and binding a function for when the timer would expire.</p>"+
+  "<p>I also made my own custom skybox for the game. I did this by creating a cubemap, fixing the perspective by mapping it on to a sphere in Blender and then exporting it as a cubemap using Nvidia Texture Tools.</p>"+
+  "<div class=\"in-text-image\"><img src='../images/mrbonesy-skybox.png'></div>"+
+  "<p>Player's highscore is also saved in the game using Unreal's save and load system. A custom class is created called MyLocalPlayerSaveGame that simply stores the highscore number, and compares it with the player's score upon game over. If the player has surpassed the highscore, it is written over the previous value.</p>"+
+  "<p>Lastly, I added a transition animation between the levels to smoothly go from menu to game scene. It was not really needed since the game is so simple and the level loads immediately.</p>"+
+  "<h2>Summary</h2>Overally, very fun to achieve all this in Unreal for my first project. The game does not seem very playable as it seems too simply. The environment is also very empty, which can be fixed in the future by spawning in clusters of props. The difficulty is also stagnant at the moment, which can be fixed by making it progressive."
+}, 
+  {
     Name: "Distance Dash",
     Details: {
       Role: "Game Engineer II",
