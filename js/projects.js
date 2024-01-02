@@ -14,7 +14,7 @@ var projects = [
     MainScreenshot: "../images/mrbonesy-preview.gif",
     Links: [{
       Image: "../images/github-logo.png",
-      Link: "https://www.roblox.com/games/13470104112/Distance-Dash-New-Physics-Challenge" ,
+      Link: "https://github.com/nashmia-riaz/mr-bonesy/releases/tag/v0.1a" ,
       Text: "Try the Demo"
     }],
     Description:
