@@ -1,6 +1,6 @@
 
-var projects = [
-  {
+var projects = {
+  MrBonesy: {
     Name: "Space Adventures of Mr. Bonesy",
     Details: {
       Role: "Solo Developer",
@@ -46,7 +46,7 @@ var projects = [
   "<p>Lastly, I added a transition animation between the levels to smoothly go from menu to game scene. It was not really needed since the game is so simple and the level loads immediately.</p>"+
   "<h2>Summary</h2>Overally, very fun to achieve all this in Unreal for my first project. The game does not seem very playable as it seems too simply. The environment is also very empty, which can be fixed in the future by spawning in clusters of props. The difficulty is also stagnant at the moment, which can be fixed by making it progressive."
 }, 
-  {
+  DistanceDash: {
     Name: "Distance Dash",
     Details: {
       Role: "Game Engineer II",
@@ -74,7 +74,7 @@ var projects = [
       "<p>Lastly, I was also tasked with extending previously written code by implementing a new level for the game, called Phase 2. Phase 2 runs similarly to Phase 1 but the player has to predict the outcome instead of trying to reach the optimum result be using the correct forces and mass. Additionally, I also had to polish previously implemented features to bring the product across the finish line. Such polishing included new tweens and animations, additional UI features and integral bug fixing.</p>"+
       "<p>It was a pleasure to work on this contract and you can try out the final game on <a href='https://www.roblox.com/games/13470104112/Distance-Dash-New-Physics-Challenge'>Roblox</a>.</p>"
   }, 
-  {
+  BombsAway: {
     Name: "Bombs Away!",
     Details: {
       Role: "Lead Developer",
@@ -99,7 +99,7 @@ var projects = [
       "<p>We then brought on voice actor and other artists to help us polish our work. Our work included working with the VA to bring about a tutorial for the game. My work included working closely with the Unity's Mecanim system to bring in interactable animations that are in sync with the VA's voice lines.</p>"+
       "<p>As of writing this, Bombs Away! has been my most extensive work with the Unity game engine and within the game development process. Not only did I work on the UX, wireframes, UI design and character animations, I also had to work with the core engine and extend it to make it work with the game idea, all the while making sure my code is up to the current standards, deploys moden design patterns and is extendable. You can try out the game on the <a href='https://play.google.com/store/apps/details?id=com.ThePurramid.BombsAway'>Play Store</a>.</p>"
   },
-  {
+  DockIt: {
     Name: "Dock-It", 
     Details: {
       Role: "Solo Developer",
@@ -127,7 +127,7 @@ var projects = [
       "<p>Two of the most challenging aspects of this project that were a learning curve for me was a. Coding asynchronously in Unity and b. Setting the appropriate rules for Firebase. It has been a very fun project that will soon be released on the Play Store.</p>"
 
   },
-  {
+  Catronaut: {
     Name: "Catronaut", 
     Details: {
       Role: "Solo Developer",
@@ -157,7 +157,7 @@ var projects = [
       "<div class=\"in-text-image\"><img src=\"../images/catronaut-obstacles.png\"></div>"+
       "<p>It also has visual refinements like animations, a trail on the player, music and a very thorough menu. It's available to play on the Play Store right now!</p>"
   },
-  {
+  Perdita: {
     Name: "Perdita", 
     Details: {
       Role: "Solo Developer",
@@ -189,7 +189,7 @@ var projects = [
       "<p>You can see the game in action below: </p>"+
       "<iframe src='https://www.youtube.com/embed/qJXNt4YlFnM' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>"
   },
-  {
+  SilentKnight: {
     Name: "Silent Knight", 
     Details: {
       Role: "Developer",
@@ -215,7 +215,7 @@ var projects = [
       "<p>The camera tracking was also tricky as the game is isometric. It was set up at a 45 degree angle using the trignometry rule. The player sets the distance and the angle, the camera will position itself automatically and follow the player around.</p>"
 
   },
-  {
+  KnockoutNation: {
     Name: "Knockout Nation",
     Details: {
       Role: "Lead Developer",
@@ -245,7 +245,7 @@ var projects = [
       "<p>But alas; right before we launched Google announced that they were shutting down their API. This lead to a new problem; keeping the game functioning without the multiplayer. So, we added in AI. The AI would randomly select a force and angle and shoot, and this would be shown on screen. Bot with higher difficulty were more likely to get the ball in the hoop, which meant that biased randomization was added in.</p>"+
       "<p>This was one of my first big game projects and a huge learning curve for me to overcome. Always grateful to my client who gave me this opportunity at the time. :)</p>"
   },
-  {
+  DamageControl: {
     Name: "Damage Control",
     Details: {
       Role: "Developer",
@@ -272,7 +272,7 @@ var projects = [
       "<p>My wonderful teammates for this game also included (in alphabetical order) <a href='https://blastinghavoc.github.io/index.html'>Jacob Taylor</a>, <a href='http://5droom.co.uk'>Jihae Han</a>, <a href='#'>Konstantin Ivanovich</a> and <a href='https://www.linkedin.com/in/mark-trump-6b3981120/'>Mark Trump</a>.</p>"+
       "<p>The game has 3 different levels unlockable based on your highscore. They have different aesthetics and assets to keep the player engaged. You can try out the demo linked above!</p>"
   },
-  {
+  StackItUp: {
     Name: "Stack It Up",
     Details: {
       Role: "Solo Developer",
@@ -301,4 +301,4 @@ var projects = [
       "<p>The last addition to the game has been adding a random bias. Between 5 ingredients and 3 lanes, often times the game doesn't spawn the ingredient that the player needs. So, the game manager works off of a random bias to increase the chances of spawning the ingredient that's needed, and switches this bias as the player progresses.</p>"+
       "<p>You can try out the demo linked above!</p>"
   }
-];
+};

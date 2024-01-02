@@ -1,6 +1,6 @@
 $(function(){
   console.log("Ready");
-  var index = getUrlParameter("index");
+  var index = getUrlParameter("project");
   var project = projects[index];
   LoadProject(project);
 })

@@ -1,5 +1,5 @@
 $(function(){
-  var index = getUrlParameter("index");
+  var index = getUrlParameter("project");
   var project = projects[index];
   LoadArt(project);
 });
