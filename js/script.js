@@ -14,9 +14,8 @@ function LoadProjects(filter){
 
       $.each(projects, function(key, value){
         if(filter && filter != "All"){
-          var tags = projects[i].Tags.split(",");
+          var tags = projects[key].Tags.split(",");
           tags.forEach(function(currentValue, index, arr){
-
             if(filter == currentValue){
               projectsContent+=LoadProject(key, responseTxt);
             }

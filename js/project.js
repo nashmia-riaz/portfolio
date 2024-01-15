@@ -10,11 +10,11 @@ function LoadProject(project){
 
   $("#project-tagline").html(project.Headline);
 
-  // var tags = project.Tags.split(",");
-  // var tagsToAdd="";
-  // tags.forEach(function(currentValue, index, arr){
-  //   tagsToAdd+= "<div class=\"tag\">"+currentValue+"</div>";
-  // });
+  var tags = project.Tags.split(",");
+  var tagsToAdd="";
+  tags.forEach(function(currentValue, index, arr){
+    tagsToAdd+= "<div class=\"tag\">"+currentValue+"</div>";
+  });
   // $("#tags").html(tagsToAdd);
 
   $("#project-role").html(project.Details.Role);
