@@ -83,6 +83,48 @@ var projects = {
       "<p>But alas; right before we launched Google announced that they were shutting down their API. This lead to a new problem; keeping the game functioning without the multiplayer. So, we added in AI. The AI would randomly select a force and angle and shoot, and this would be shown on screen. Bot with higher difficulty were more likely to get the ball in the hoop, which meant that biased randomization was added in.</p>"+
       "<p>This was one of my first big game projects and a huge learning curve for me to overcome. Always grateful to my client who gave me this opportunity at the time. :)</p>"
   },
+  PressPlay: {
+    Name: "Press Play", 
+    Details: {
+      Role: "Programmer and Animator",
+      TeamSize: "3 persons",
+      Duration: "7 days",
+      Tech: "Unity and C#"
+    },
+    Type: "Project",
+    Thumbnail: "images/press-play.png",
+    Headline: "An episodic horror game - find the mysteries within the VHS tapes.",
+    Tags: "UNITY,C#, 3D",
+    MainScreenshot: "../images/press-play-gameplay.gif",
+    Links: [{
+      Image: "../images/itch-logo.png",
+      Link: "https://p4nash.itch.io/press-play" ,
+      Text: "Try it on the itch.io"
+    }],
+    Description:
+      "<p>Press Play is an episodic horror game developed for <a href='https://itch.io/jam/scream-tv'>Scream TV 2024</a>. It was developed within the 7-day period for the game jam, and focuses on mini-games within the overarching theme of the game.</p>"+
+      "<p>You just moved into a new place and keep finding VHS tapes scattered around the apartment. Watch them to uncover their mysteries.</p>"+
+      "<p>For our entire game, we decided to have 3 scenes; the apartment, warehouse and snowy woods. To create the apartment and the warehouse, modular packs from the Unity Asset store. For the woods, I used a terrain and modeled simple tree logs in Blender and created the ground using Unity's terrain system, explained at length later.</p>"+
+      "<p>One of the first game mechanics that I implemented for this game was the pickup system. It uses a raycast directing outwards from the player camera to detect what the player is looking at. If the player is looking at an item of interest, text pops up to show the player how to interact. Interaction executes any functionality attached to the object via Unity Events.</p>"+
+      "<p>In addition to this, objects of interest also have a glow to them. Initial playtesting showed that players were unsure of what to do within the game, so we decided to add a glow to these objects. The glow is achieved via script by enabling emission on the material and cranking up the emissions intensity from 0 to 1, and vice versa.</p>"+
+      "<div class=\"in-text-image\"><img src='../images/press-play-pickup.gif'></div>"+
+      "<p>Another system of interest within this game was the working mirror. I have always been fascinated with mirrors and decided to utilize a pretty straightforward method within Unity to bring it to life. The mirror has a camera attached to it and renders anything it sees on to the mirror texture. An initial issue here was that anything seen within the mirror was not 'mirrored' properly, so a shader was added to simply flip the camera x UVs. This flipped the image horizontally to match how a mirror would act.</p>"+
+      "<div class=\"in-text-image\"><img src='../images/press-play-mirror.gif'></div>"+
+      "<p>Next, once the apartment was done, we worked on the warehouse level. It spawns you in as a worker with the warehouse lights off. You have to travel to the other side of the map and flip the fuse box on. This is when the fun stuff starts to happen.</p>"+
+      "<p>The first step was to design the layout. The warehouse has 12 huge shelves laid out in 3 rows and 4 columns. Parts between shelves are blocked off by certain obstacles to give the level some playability and life. We didn't want the player to have a boring long walk to the office on the other end, so some simple scares are added to the map that are triggered as the player traverses through.</p>"+
+      "<div class=\"in-text-image\"><img src='../images/press-play-warehouse-layout.png'></div>"+
+      "<p>Once the layout was done and map was created, the main task at hand was to create the mannequin AI. This turned out to be pretty straightforward; the mannequins move towards the player at high speed using Unity's NavMesh agent and surface. They only move when the player is looking away; this is done using the camera's frustrum planes to see if the renderer bounds are within camera and the check renderer.isVisible to see if the mannequin is being rendered. The mannequin could be within the camera's frustrum but blocked by an object, and it would still move towards the player. Therefore, render.isVisible check was added afterwards to check if the mannequin was being rendered on camera as well.</p>"+
+      "<p>To show the player's death, I wanted to add a simple animation due to shortage of time. Using Unity's Cinemachine, I added a death camera at the feet of the player. I would set it to look at the mannequin that killed the player, and set it's priority higher than the main camera. This way, upon death, it would animate to look like the player dropped their camera and see the mannequins feet at the end of the tape.</p>"+
+      "<div class=\"in-text-image\"><img src='../images/press-play-death.gif'></div>"+
+      "<p>For the next level, we wanted to make creepy woods with a pit in the middle. Goal of the level is for the player to feed the pit; collect dead deer from around the map and throw them in the pit.</p>"+
+      "<div class=\"in-text-image\"><img src='../images/press-play-woods.png'></div>"+
+      "<p>The choices for this level were scope based due to the short time, I modelled simple tree logs and a snowy plane using Unity's terrain system. Fog was added to keep the player from seeing the level's limitations, and falling snow was added as a particle system that would follow the player's position. Our main attraction of the level, the pit, was also modelled using the terrain system.</p>"+
+      "<p>A foot print system was added to the level, which was very fun to make. I made prefabs for footprints that are simple quads with textures and normal maps on them. They're positioned on the map by using the collision points the player model makes with the terrain. In order to represent what direction the player is facing, player's y-rotation is applied to the footprints. Lastly, the normal of the contact point player makes with the ground is used to rotate it around x and z-axis so they appear to align with the snow.</p>"+
+      "<div class=\"in-text-image\"><img src='../images/press-play-footprints.png'></div>"+
+      "<p>Death animation for this level involved around the player either jumping down the pit, or being pushed. For this, I added a dolly path and animated that, assigning its camera priority and changing the path value to progress the player from the starting to the end position.</p>"+
+      "<p>To tie the game together, an audio manager system was added. The audio manager stores a list of objects of custom type SoundClip, which stores info on what sound to play, its ID and audio source. This is used to play different audio cues in spatial sound around the map and direct the player.</p>"+
+      "<p>Apart from this, I won't go into the details of the game and it's story here. Try it out on <a href='https://p4nash.itch.io/press-play'>itch.io</a> to experience the spoops!</p>"     
+  },
   DockIt: {
     Name: "Dock-It", 
     Details: {
