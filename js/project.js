@@ -39,7 +39,7 @@ function LoadProject(project){
     var isCurrentProject = key == currentProject;
     var selectedItemClass = isCurrentProject ? "\"selectedNavbarItem\"" : "\"\"";
     console.log(selectedItemClass);
-    projectsList += "<a href='/pages/Project.html?project="+key+"' class="+selectedItemClass+"><li>"+value.Name+"</li></a>";
+    projectsList += "<a href='/portfolio/pages/Project.html?project="+key+"' class="+selectedItemClass+"><li>"+value.Name+"</li></a>";
   });
   $(".sidebar-projects-list").html(projectsList);
 }
