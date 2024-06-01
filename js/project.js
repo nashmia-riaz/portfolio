@@ -1,6 +1,7 @@
+var currentProject = "";
+
 $(function(){
-  console.log("Ready");
-  var index = getUrlParameter("project");
+  var index = currentProject = getUrlParameter("project");
   var project = projects[index];
   LoadProject(project);
 })
@@ -31,4 +32,26 @@ function LoadProject(project){
   $("#project-links").html(linksToAdd);
 
   $("#project-description").html(project.Description);
+
+  //populate navbar
+  var projectsList = "";
+  $.each(projects, function(key, value){
+    var isCurrentProject = key == currentProject;
+    var selectedItemClass = isCurrentProject ? "\"selectedNavbarItem\"" : "\"\"";
+    console.log(selectedItemClass);
+    projectsList += "<a href='/pages/Project.html?project="+key+"' class="+selectedItemClass+"><li>"+value.Name+"</li></a>";
+  });
+  $(".sidebar-projects-list").html(projectsList);
+}
+
+function ShowNavbar(){
+  $(".sidebar>.navbar-brand").animate({"left": "2em"});
+  $(".sidebarBackground").fadeIn("slow");
+  $(".sidebar").animate({"margin-left": "0"});
+}
+
+function HideNavbar(){
+  $(".sidebar>.navbar-brand").animate({"left": "-2em"});
+  $(".sidebarBackground").fadeOut("slow");
+  $(".sidebar").animate({"margin-left": "-25%"});
 }

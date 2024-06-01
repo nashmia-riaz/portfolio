@@ -1,29 +1,37 @@
+:root{
+  --main-bg-color: #1f2030;
+  --secondary-color: #2d2f54;
+  --hover-color: #432c5c;
+  --accent-color: #cc1646;
+  --text-color: #babfde;
+  --link-focus: #6f2232;
+}
 h1{
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
-  color: #cc1646;
+  color: var(--accent-color);
   display: block;
   text-align: center;
 }
 a{
-  color: #cc1646;
+  color: var(--accent-color);
   text-decoration: none;
   font-weight: 500;
 }
 body {
-  border: #cc1646 8px solid;
+  border: var(--accent-color) 8px solid;
   margin: 0!important;
   padding: 100px 50px;
   min-height: 100vh;
   background: #1f2030;
-  color: #babfde;
+  color: var(--text-color);
   overflow-x: hidden;
 }
 
 p.description{
   font-family: 'Montserrat', sans-serif;
   text-align: center;
-  color: #808cb0;
+  color: var(--text-color);
   font-style: italic;
   font-weight:500;
 }
@@ -52,7 +60,7 @@ p.description{
 .tags, .description{
   font-family: 'Montserrat', sans-serif;
   text-align: center;
-  color: #babfde;
+  color: var(--text-color);
   font-style: italic;
   font-weight:500;
 }
@@ -103,7 +111,7 @@ hr{
 }
 .playstore-link{
   font-size: 0.85em;
-  background-color: #2d2f54;
+  background-color: var(--secondary-color);
   margin: auto;
   margin-right: 20px;
   color: #babfde;
@@ -118,7 +126,7 @@ hr{
   margin-right: 10px;
 }
 .playstore-link:hover{
-  background-color: #432c5c;
+  background-color: var(--hover-color);
 }
 .game-links{
   display: flex;
@@ -146,16 +154,16 @@ hr{
 }
 .sorting-links>div>a{
   padding: 15px;
-  background-color: #2d2f54;
-  color: #babfde!important;
+  background-color: var(--secondary-color);
+  color: var(--text-color)!important;
   text-decoration: none;
   border-radius: 10px;
   margin: 15px;
   transition: background-color 0.5s
 }
 .sorting-links>div>a:hover{
-  background-color: #432c5c;
-  color: #babfde;
+  background-color: var(--hover-color);
+  color: var(--text-color);
 }
 .carousel-control-next,.carousel-control-prev{
   color: #ba1c1c;
@@ -185,14 +193,14 @@ nav.navbar{
 }
 .navbar-nav>li>a:hover, .navbar-nav>li>a:focus{
   background-color: transparent!important;
-  color:#6f2232;
+  color:var(--link-focus);
 }
 .navbar-nav>.active>a, .navbar-nav>.active>a:focus{
-  color: #cc1646;
+  color: var(--accent-color);
   background-color: transparent!important;
 }
 .navbar-nav .nav-link.active{
-  color: #cc1646;
+  color: var(--accent-color);
 }
 .navbar-nav{
   position: fixed;
@@ -227,4 +235,88 @@ i{
   text-align: center;
   margin-top: -20px;
   margin-bottom: 40px;
+}
+
+.header{
+  position: fixed;
+  top: 4em;
+  left: 4em;
+}
+.header>button{
+  background-color: var(--secondary-color);
+  border: transparent;
+  transition: background-color 0.5s;
+  border-radius: 0.25em;
+  padding: 6px 12px;
+}
+.header>button:hover{
+  background-color: var(--hover-color);
+}
+.header>button>i{
+  color: var(--text-color);
+  font-size: 2em;
+  margin: 0;
+}
+.sidebarBackground{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0.5, 0.5, 0.5, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  backdrop-filter: blur(3px);
+  display:none;
+}
+
+.sidebar{
+  box-shadow: 5px 5px 15px rgba(0.5, 0.5, 0.5, 0.5);
+  width: 25%;
+  height: 100%;
+  background-color: var(--main-bg-color);
+  margin-left: -25%;
+  padding: 0;
+}
+.sidebar-projects-list{
+  list-style: none;
+  width: 25%;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.sidebar-projects-list>a{
+  background-color: var(--main-bg-color);
+  transition: background-color 0.5s;
+  padding: 0.75em;
+  display: block;
+  padding-left: 2em;
+  font-size: 1.2em;
+}
+.sidebar-projects-list>a:hover{
+  background-color: var(--secondary-color);
+}
+.sidebar-projects-list>a>li{
+  color: var(--text-color);
+  font-weight: 300;
+  transition: color 0.5s;
+}
+.sidebar-projects-list>a>li:hover{
+  color: white;
+}
+.selectedNavbarItem{
+  background-color: var(--secondary-color)!important;
+}
+.selectedNavbarItem>li{
+  color: white!important;
+}
+.sidebar>.navbar-brand{
+  position: absolute;
+  top: 2em;
+  left: -2em;
+  width: 2em;
+  height: 2em;
+}
+.sidebar>.navbar-brand>img{
+  width: 100%;
 }
