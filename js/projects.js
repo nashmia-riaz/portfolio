@@ -93,6 +93,41 @@ var projects = {
       "<p>But alas; right before we launched Google announced that they were shutting down their API. This lead to a new problem; keeping the game functioning without the multiplayer. So, we added in AI. The AI would randomly select a force and angle and shoot, and this would be shown on screen. Bot with higher difficulty were more likely to get the ball in the hoop, which meant that biased randomization was added in.</p>"+
       "<p>This was one of my first big game projects and a huge learning curve for me to overcome. Always grateful to my client who gave me this opportunity at the time. :)</p>"
   },
+  DockItWeb: {
+    Name: "Dock-It (React Build)",
+    Details: {
+      Role: "Lead Developer",
+      TeamSize: "1 people",
+      Duration: "2 Months",
+      Tech: "Firebase, React and Vite"
+    },
+    Type: "Project",
+    Thumbnail: "images/dock-it-web.png",
+    Headline: "A shared list-keeping app that helps you focus on what needs to be done.",
+    Tags: "React, Firebase, Web Build",
+    MainScreenshot: "../images/dock-it-preview.gif",
+    Links: [{
+      Image: "../images/playstore-logo.png",
+      Link: "https://nashmia-riaz.github.io/dock-it/" ,
+      Text: "Try out the web build!"
+    }],
+    Description:
+      "<p>In order to learn React, I decided to port my <a href='https://nashmia-riaz.github.io/portfolio/pages/Gallery.html?project=DockIt'>existing project</a> over using React. I followed The Odin Project and applied the concepts in my project</p>"+
+      "<p>The first step was to set up my onboarding page (image above). While the CSS styling and page layout was very straightforward, I wanted the user to click the button and be redirected to the login and registration page. For this, I attached an \'onClick\' function to the button. Clicking this button then redirected the user to the appropriate page using React Router. </p>"+
+      "<p>Next, I wanted the login and registration page to work from the two tabs on top of the page. Here, the onboarding page used states in React to switch between login or registration. Clicking a tab would swap the state of the page and conditionally render the appopriate form.</p>"+
+      "<div class=\"in-text-image\"><img src=\"../images/dock-it-register.png\"><p class='caption'>Dock It - Register Page</p></div>"+
+      "<p>As the forms were very similar in functionality (would either register the user or log them in), I decided to use class components for this part. Each form is inherited from a single base form, where clicking the button carries out the attached functionality. The input fields set states within each class component. Firebase's registerUserWithEmail and signInUserWithEmail are used to either register and login the user using their entered information.</p>"+
+      "<div class=\"in-text-image\"><img src=\"../images/dock-it-login.png\"><p class='caption'>Dock It - Login Page</p></div>"+
+      "<p>Moreover, the login page has additional information such as the option to reset the password. Clicking the reset password field opens up a popup where the user can enter their email address and a password reset email is sent to them. The popups are set up using class components as well since different popups have different layouts but similar functionality; it shows up in the middle of the window and clicking outside the popup will close it whereas a 'success' functionality is also attached to it. In this case, clicking 'reset password' is our success functionality where we call Firebase's sendPasswordResetEmail to send the email to the user.</p>"+
+      "<p>Once the user is successfully registered or logged in, they are sent to the home page with their lists. This is where the fun begins. Because of how are database is laid out, we have user's information stored separately. This is where their lists information is stored for easy access. Anytime a user creates a list or imports a shared list, the list ID added to their user information in the Firebase database under \'/Users/{userID}/Lists/\'. The list's particular information, like the items and their state, is stored separately under \'/Lists\'. Therefore, we first fetch the list IDs using the user's particular information, and then the lists themselves using the individual list IDs.</p>"+
+      "<div class=\"in-text-image\"><img src=\"../images/dock-it-database.png\"><p class='caption'>Dock It - Databse Layout</p></div>"+
+      "<p>All of our data being displayed is done so using keys and states in React. The data is temporarily stored using states, as the data can be shared amongst multiple users and prone to change. The IDs are the same as the ones in Firebase. So when a change does occur, our code updates the state using the ID, and as we are using keys to display the data, it is reflected accordingly in the page without the need for a full refresh.</p>"+
+      "<div class=\"in-text-image\"><img src=\"../images/dock-it-homepage.png\"><p class='caption'>Dock It - Home Page</p></div>"+
+      "<p>This is a lot of data to fetch and it's dependent on one and the other. The app needs to wait to fetch the list IDs, then fetch the lists themself, and then display the current list. All of this is done via Promises in React. Fetching list IDs carries out promises which on success fetch the lists. Upon fetching the lists, the first list is displayed.</p>"+
+      "<p>In order to display the list itself, a simple layout was set up. Sidebar on the left where you can select the current list from all the lists (along with other options), a center view with the list itself where the title is at the top and the items are below it. The lists can be deleted, removed or shared in the sidebar by going through their options, where a popup will show up for each option (see popups explained above). The title is an input field that's editable, and the items can be either added or deleted, checked off or changed.</p>"+ 
+      "<p>For all of the updating, I used Firebase's asynchronous functions. For the asynchronous functions to be attached to events, we need their paths. These are set up when the user loads all the lists, the current list and it's items as this is where the path can be set up (for example, the list IDs are being fetched and its path can be sorted here). Having asynchronous functions for updating our data is crucial as the data can be shared between multiple users and time-sensitive updates are important here.</p>"+
+      "<p>The last important thing of note here is that our list items are sorted so that the items to be done are at the top, and the items crossed off are at the bottom. So when an item is added or crossed off, we will sort our array of states that stores said items as well.</p>" 
+    },
   PressPlay: {
     Name: "Press Play", 
     Details: {
