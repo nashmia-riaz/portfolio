@@ -93,6 +93,32 @@ var projects = {
       "<p>But alas; right before we launched Google announced that they were shutting down their API. This lead to a new problem; keeping the game functioning without the multiplayer. So, we added in AI. The AI would randomly select a force and angle and shoot, and this would be shown on screen. Bot with higher difficulty were more likely to get the ball in the hoop, which meant that biased randomization was added in.</p>"+
       "<p>This was one of my first big game projects and a huge learning curve for me to overcome. Always grateful to my client who gave me this opportunity at the time. :)</p>"
   },
+  MartyBop: {
+    Name: "Marty Bop",
+    Details: {
+      Role: "Lead Developer",
+      TeamSize: "1 people",
+      Duration: "1 Month",
+      Tech: "Node, Spotify API, Express.js"
+    },
+    Type: "Project",
+    Thumbnail: "images/marty-bop-thumbnail.png",
+    Headline: "Have Marty bop her head along to your music!",
+    Tags: "React, Firebase, Web Build",
+    MainScreenshot: "../images/marty-bop-preview.gif",
+    Links: [{
+      Image: "../images/github-logo.png",
+      Link: "https://marty-bop.onrender.com/" ,
+      Text: "Try out the web build!"
+    }],
+    Description:
+    "<p>As part of my web engineering journey, I decided to make a little Spotify project. It's a simple animation; the cat bops his head to the tempo of the sound you are currently listening to.</p>"+
+    "<p>The user logs in using their Spotify. Our Express.js server acts as the middle-man by passing authentication requests to and from Spotify's API. Once the user is authenticated, they are redirected to the animation page using the callback and pass it the authentication token. We disable the login UI and animate the cat.</p>"+
+    "<p>Once logged in, the client will use the access token to periodically fetch the song details. This is to check when the currently playing song changes and as does the tempo. We will also refresh the token periodically to update the access token so it's up to date and API calls go through successfully.</p>"+
+    "<p>In order to update the animation, we use the tempo field. Tempo defines beats per minute. Our animation, however, is of the cat bopping his head up and down. To match the tempo, the animation should loop back with each beat. Therefore, we use the formula AnimationTime = 60/(tempo * 2) to make sure our animation matches the beat time.</p>"+
+    "<p>Lastly, in order to log the player out, we simply take the authentication token away. One more thing: the lamp post is also animated. This is simply done by swapping out the image sources periodically.</p>"+
+    "<p>You can also view the source code <a href='https://github.com/nashmia-riaz/marty-bop'>here</a>.</p>"    
+  },
   DockItWeb: {
     Name: "Dock-It (React Build)",
     Details: {
@@ -107,7 +133,7 @@ var projects = {
     Tags: "React, Firebase, Web Build",
     MainScreenshot: "../images/dock-it-preview.gif",
     Links: [{
-      Image: "../images/playstore-logo.png",
+      Image: "../images/github-logo.png",
       Link: "https://nashmia-riaz.github.io/dock-it/" ,
       Text: "Try out the web build!"
     }],
